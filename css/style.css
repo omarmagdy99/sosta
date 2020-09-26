@@ -1,0 +1,91 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+/* start header */
+header nav .navbar-brand {
+    font: 50px bolder;
+
+}
+
+header nav {
+
+    font: large bold;
+    background-color: #6E00FF;
+}
+
+/* end header */
+/* start section 1 head */
+#sec1-head {
+    height: 120vh;
+    background: url(../pic/1.jpg) center fixed;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+#sec1-head .cover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #6f00ffbe;
+}
+
+#sec1-head .rectangel {
+    top: 45%;
+    left: -50%;
+    width: 50%;
+    height: 30%;
+    z-index: 1;
+    background-color: #6f00ff;
+    animation: move-right 10s;
+    animation-iteration-count: infinite;
+
+
+}
+
+@keyframes move-right {
+    0% {
+        left: -50%;
+    }
+
+    25% {
+
+        height: 30%;
+    }
+
+    75% {
+        height: 0%;
+    }
+
+    100% {
+        left: 110%;
+
+    }
+
+}
+
+#sec1-head .container {
+    z-index: 3;
+}
+#sec1-head h5{
+    font: x-large bold;
+    color: wheat;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+
+}
+#sec1-head .sec-type{
+    display: inline;
+    font:xx-large bolder ;
+}
+#sec1-head img{
+   
+
+}
+
+/*end section 1 head */
