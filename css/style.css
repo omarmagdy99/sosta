@@ -1,7 +1,5 @@
 * {
-    font-family: 'Nunito', sans-serif;
-}
-
+    font-family: 'Roboto', sans-serif;}
 
 
 /* start header */
@@ -32,7 +30,7 @@ header nav {
     width: 100%;
     height: 100%;
     z-index: 2;
-    background-color: #6f00ffbe;
+    background-color: #6f00ffd5;
 }
 
 #sec1-head .rectangel {
@@ -74,18 +72,208 @@ header nav {
 }
 #sec1-head h5{
     font: x-large bold;
-    color: wheat;
+    color: white;
     letter-spacing: 2px;
     word-spacing: 2px;
 
 }
 #sec1-head .sec-type{
-    display: inline;
+    display: block;
     font:xx-large bolder ;
-}
-#sec1-head img{
-   
+    height: 45px;
+    font: 350% bolder;
+    color: white;
 
 }
+@media only screen and (max-width: 768px) {
+    #sec1-head{
+        padding-top: 130px;
+        height: 150vh;
+    }
+    #sec1-head .sec-type{
+    height: 85px;
 
+    }
+    
+}
 /*end section 1 head */
+ /* start section 2 card */
+ 
+ 
+#sec2-card h5{
+    font-size: x-large ;
+    font-weight: bold ;
+}
+#sec2-card p{
+    font-size: large;
+}
+#sec2-card i{
+    top:25px;
+}
+#sec2-card .bg-img{
+    z-index: 1;
+    position: relative;
+    background-size: cover;
+}
+#sec2-card .bg-img-2 {
+    background-image: url(../pic/14.jpg);
+}
+#sec2-card .bg-img-1 {
+    background-image: url(../pic/25.jpg);
+}
+ #sec2-card .bg-img::after{
+    background-color: rgba(110, 0, 255, 0.85);
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1; 
+} 
+#sec2-card .bg-img::before{
+    background-color: rgb(110, 0, 255);
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1; 
+    transition: all 1s;
+    opacity: 0;
+}
+#sec2-card>div>div>div:hover ::before {
+    /* animation-name: bg-img; */width: 100%;
+    opacity: 100%;
+}
+#sec2-card>div>div>div:hover div i {
+animation-name:bg-img ;
+animation-duration: 0.7s;
+}
+@keyframes bg-img{
+    0%{
+        top: 25px;
+
+    }
+    30%{
+        top: 50px;
+
+    }
+    60%{
+        top: 5px;
+
+    }
+    100%{
+        width: 25%;
+
+    }
+}
+/* end section 2 card*/
+
+
+/* start section 3 about us */
+#sec3-about h2 ,#sec4-our h2{
+    font-size: 300% ;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+#sec3-about h3,.animat h3{
+    font-size: 250% ;
+    font-weight: bold;
+    text-transform: capitalize;
+    
+}
+#sec3-about .pr{
+    color:  rgb(110, 0, 255);
+    font-size: x-large;
+    font-weight: bold;
+}
+#sec3-about h5{
+    font-size: x-large;
+}
+#sec3-about a ,.animat a{
+    background-color: rgb(110, 0, 255);
+    text-transform: capitalize;
+    transition: all 0.8s;
+}
+#sec3-about a:hover,.animat a:hover{
+    text-decoration: none;
+    background-color: rgb(47, 0, 109);
+
+}
+
+/* end section 3 about us */
+/* start section 4 our service */
+#sec4-our .our-bg{
+    background-size: cover;
+}
+#sec4-our .bg-1{
+    background-image: url(../pic/12.jpg);
+}
+#sec4-our .bg-2{
+    background-image: url(../pic/25.jpg);
+}
+#sec4-our .bg-3{
+    background-image: url(../pic/20.jpg);
+}
+#sec4-our .bg-4{
+    background-image: url(../pic/21.jpg);
+}
+
+#sec4-our .row{
+    margin: 0%;
+}
+.our-bg-1{
+    background-color: rgb(110, 0, 255);
+}
+.our-bg-2{
+    background-color:rgb(255, 89, 89);
+}
+.our-bg-3{
+    background-color:rgb(98, 163, 0);
+}
+.our-bg-4{
+    background-color:black;
+}
+#sec4-our a{
+color: white;
+transition: all 0.7s;
+text-transform: capitalize;
+}
+#sec4-our a::after{
+    position: relative;
+    content: ">>";
+    color: white;
+    padding-left: 7px;
+}
+#sec4-our a:hover{
+text-decoration: none;
+padding-left: 5px;
+
+}
+#sec4-our i{
+    color: rgba(255, 255, 255, 0.603);
+}
+#sec4-our h3{
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+#sec4-our .animat-img{
+width: 80%;
+    animation: animat-img 1.4s;
+    animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+}
+@keyframes animat-img{
+    from{
+        padding-top: 30px;
+    }
+    to{
+        padding-top: 0px;
+    }
+}
+.animat-div{
+    height: 90vh;
+}
+/* end section 4 our service */
